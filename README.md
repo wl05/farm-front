@@ -15,13 +15,13 @@ Follow the following steps to get development environment running.
    ```bash
    cd farm-front
    npm install
-   visit localhost:3000
    ```
 
 ### Run
 
 #### Run Start
 
-```bash
-npm start
-```
+    ```bash
+    npm start
+    visit localhost:3000s
+    ```
