@@ -1,0 +1,2 @@
+import TransactionHistoryViewList from "./TransactionHistoryViewList"
+export default TransactionHistoryViewList

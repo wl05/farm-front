@@ -1,0 +1,275 @@
+.banner_box {
+    width: 100%;
+    height: 460px;
+    background:url(../../Assets/bg.png);
+}
+
+@media only screen and (min-device-pixel-ratio: 2) {
+    .banner_box { background: url(../../Assets/bg@2x.png)  no-repeat; }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+    .banner_box { background: url(../../Assets/bg@3x.png)  no-repeat; }
+}
+.banner_box h1 {
+    text-align: center;
+    padding-top:120px;
+    color: #fff;
+    font-size:44px;
+    font-family: 'proxima-nova','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.banner_box h3 {
+    width: 525px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size:24px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+.banner_box .search_box {
+    width: 732px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 10px;
+    background-color: rgba(8,15,23,0.5);
+    box-shadow: 1.6px 1.2px 2px 0 rgba(4, 0, 0, 0.39);
+    margin: 0 auto;
+    margin-top: 55px;
+    display: flex;
+    justify-content:space-between;
+}
+.banner_box .search_box .tag {
+    font-size:20px;
+    color:#fff;
+    padding:0 15px;
+}
+.banner_box .search_box .search_button {
+    margin: 0 20px;
+    width:100px;
+    background:#00ba8d;
+    color:#fff;
+    border:1px solid #00ba8d;
+}
+.trade {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.trade .title {
+    font-size: 26px;
+}
+.trade .trade_sell {
+    width: 590px;
+}
+.trade .trade_buy {
+    width: 590px;
+}
+.ant-tabs-nav .ant-tabs-tab-active {
+    color:#00ba8d;
+}
+.ant-tabs-nav .ant-tabs-tab:hover {
+    color:#00ba8d;
+}
+.ant-tabs-ink-bar {
+    background:#00ba8d;
+}
+.offer {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content:space-between;
+    background-color: #f6f6f6;
+    padding: 18px;
+    margin-bottom:20px;
+}
+.offer .seller {
+    width: 90px;
+}
+.offer .seller .avatar {
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+.offer .seller .avatar img {
+    width: 56px;
+    height: 56px;
+}
+.offer .seller .username {
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    line-height: 30px;
+    color: #666;
+}
+.offer .seller .rating {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    line-height: 30px;
+    color: #FFC44E;
+}
+.offer .info {
+    flex: 1;
+    padding-left: 18px;
+}
+.offer .info .pricebox .price {
+    color: rgba(0, 199, 152, 1);
+    font-size: 24px;
+}
+.offer .info .pricebox .redprice {
+    color: #fd636b;
+    font-size: 24px;
+}
+.offer .info .pricebox {
+    display: flex;
+    justify-content: space-between;
+}
+.offer .info .pricebox .redprice span {
+    font-size: 14px;
+}
+.offer .info .pricebox .price span {
+    font-size: 14px;
+}
+.offer .info .pricebox .payment {
+    padding:0 20px;
+    line-height:45px;
+}
+.offer .info .pricebox .payment i {
+    padding:0 5px;
+    font-size:18px;
+}
+.alipay {
+    color:#00BEF8;
+}
+.wechat {
+    color:#00CB7B;
+}
+.card {
+    color:#96A0D3;
+}
+.offer .info .limit {
+    font-size:14px;
+    line-height:30px;
+    padding-top:3px;
+    color:#666;
+}
+.offer .info .others {
+    font-size:14px;
+    line-height:30px;
+    color:#666;
+}
+.offer .info b {
+    padding-right: 5px;
+}
+.offer .info .others .amount {
+    padding-left: 20px;
+}
+.offer .button {
+    height:48px;
+    width:130px;
+    align-self:center;
+}
+.offer .button button {
+    height:48px;
+    width:130px;
+    background:#00ba8d;
+    color:#fff;
+    border:1px solid #00ba8d;
+    font-size:18px;
+}
+.offer .redbutton {
+    height:48px;
+    width:130px;
+    align-self:center;
+}
+.offer .redbutton button {
+    height:48px;
+    width:130px;
+    background:#fd636b;
+    color:#fff;
+    border:1px solid #fd636b;
+    font-size:18px;
+}
+.icons {
+    width:100%;
+    height:330px;
+    background-color: #f6f6f6;
+}
+.icons .container {
+    width:1200px;
+    padding:60px 0;
+    margin:0 auto;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+}
+.icons .container .icobox {
+    width: 470px;
+    height: 300px;
+}
+.icons .container .icobox .easy_ico {
+    background: url(../../Assets/easy-to-use.png)  no-repeat;
+    width:140px;
+    height:93px;
+    margin: 0 auto;
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+    .icons .container .icobox .easy_ico {
+        background: url(../../Assets/easy-to-use@2x.png)  no-repeat;
+    }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+    .icons .container .icobox .easy_ico {
+        background: url(../../Assets/easy-to-use@3x.png)  no-repeat;
+    }
+}
+
+
+.icons .container .icobox .fast_ico {
+    background: url(../../Assets/fast-smooth.png)  no-repeat;
+    width:126px;
+    height:93px;
+    margin: 0 auto;
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+    .icons .container .icobox .fast_ico {
+        background: url(../../Assets/fast-smooth@2x.png)  no-repeat;
+    }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+    .icons .container .icobox .fast_ico {
+        background: url(../../Assets/fast-smooth@3x.png)  no-repeat;
+    }
+}
+
+.icons .container .icobox .fair_ico {
+    background: url(../../Assets/fair-secure.png)  no-repeat;
+    width:130px;
+    height:93px;
+    margin: 0 auto;
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+    .icons .container .icobox .fair_ico {
+        background: url(../../Assets/fair-secure@2x.png)  no-repeat;
+    }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+    .icons .container .icobox .fair_ico {
+        background: url(../../Assets/fair-secure@3x.png)  no-repeat;
+    }
+}
+.icons .container .icobox .title {
+    font-size: 18px;
+    line-height: 60px;
+}
+.icons .container .icobox p {
+    width: 250px;
+    margin: 0 auto;
+}
