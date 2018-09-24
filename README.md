@@ -16,3 +16,11 @@ Follow the following steps to get development environment running.
    cd farm-front
    npm install
    ```
+
+### Run
+
+#### Run Start
+
+```bash
+npm start
+```
