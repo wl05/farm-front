@@ -23,5 +23,5 @@ Follow the following steps to get development environment running.
 
     ```bash
     npm start
-    visit localhost:3000s
+    visit localhost:3000
     ```
