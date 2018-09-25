@@ -1,10 +1,10 @@
-import Home from '../Containers/Home'
-import Login from "../Containers/Login"
-import UserList from "../Containers/UserList"
-import UserTransactionHistoryList from "../Containers/UserTransactionHistoryList"
-import UserTransactionHistoryListDetails from "../Containers/UserTransactionHistoryListDetails"
-import TransactionHistory from "../Containers/TransactionHistory"
-import TransactionDetails from "../Containers/TransactionDetails"
+import Home from './Home'
+import Login from "./Login"
+import UserList from "./UserList"
+import UserTransactionHistoryList from "./UserList/UserTransactionHistoryList"
+import UserTransactionHistoryListDetails from "./UserList/UserTransactionHistoryListDetails"
+import TransactionHistory from "./TransactionHistory"
+import TransactionDetails from "./TransactionHistory/TransactionDetails"
 import React from 'react';
 export default {
     routes : [

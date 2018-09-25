@@ -1,49 +1,35 @@
 import React from 'react';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import "./Style.scss";
-const FormItem = Form.Item;
+import { Form, Icon, Input, Button } from 'antd'
+import { connect } from 'react-redux'
+import "./Style.scss"
+import { login } from "./action"
+const FormItem = Form.Item
 class Login extends React.Component {
     componentWillMount () {
         // const {receiveData} = this.props;
         // receiveData(null, 'auth');
     }
     
-    // componentWillReceiveProps(nextProps) {
-    //     const { auth: nextAuth = {} } = nextProps;
-    //     const { history } = this.props;
-    //     if (nextAuth.data && nextAuth.data.uid) {   // 判断是否登陆
-    //         localStorage.setItem('user', JSON.stringify(nextAuth.data));
-    //         history.push('/');
-    //     }
-    // }
-    // componentDidUpdate (prevProps) { // React 16.3+弃用componentWillReceiveProps
-    //     const {auth: nextAuth = {}, history} = this.props;
-    //     // const { history } = this.props;
-    //     if (nextAuth.data && nextAuth.data.uid) {   // 判断是否登陆
-    //         localStorage.setItem('user', JSON.stringify(nextAuth.data));
-    //         history.push('/');
-    //     }
-    // }
-    //
+    componentWillReceiveProps (nextProps) {
+        // const {auth: nextAuth = {}} = nextProps;
+        // const {history} = this.props;
+        // if (nextAuth.data && nextAuth.data.uid) {   // 判断是否登陆
+        //     localStorage.setItem('token', JSON.stringify(nextAuth.data));
+        //     history.push('/');
+        // }
+    }
+    
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
-                const {fetchData} = this.props;
-                if (values.userName === 'admin' && values.password === 'admin') fetchData({
-                    funcName : 'admin',
-                    stateName : 'auth'
-                });
-                if (values.userName === 'guest' && values.password === 'guest') fetchData({
-                    funcName : 'guest',
-                    stateName : 'auth'
-                });
+                console.log("进来了")
+                this.props.login(
+                    values.username,
+                    values.password
+                )
             }
         });
-    };
-    gitHub = () => {
-        window.location.href = 'https://github.com/login/oauth/authorize?client_id=792cdcd244e98dcd2dee&redirect_uri=http://localhost:3006/&scope=user&state=reactAdmin';
     };
     
     render () {
@@ -56,7 +42,7 @@ class Login extends React.Component {
                     </div>
                     <Form onSubmit={this.handleSubmit} style={{maxWidth : '300px'}}>
                         <FormItem>
-                            {getFieldDecorator('userName', {
+                            {getFieldDecorator('username', {
                                 rules : [ {required : true, message : '请输入用户名!'} ],
                             })(
                                 <Input prefix={<Icon type="user" style={{fontSize : 13}}/>}
@@ -72,13 +58,6 @@ class Login extends React.Component {
                             )}
                         </FormItem>
                         <FormItem>
-                            {getFieldDecorator('remember', {
-                                valuePropName : 'checked',
-                                initialValue : true,
-                            })(
-                                <Checkbox>记住我</Checkbox>
-                            )}
-                            <a className="login-form-forgot" href="" style={{float : 'right'}}>忘记密码</a>
                             <Button type="primary" htmlType="submit" className="login-form-button"
                                     style={{width : '100%'}}>
                                 登录
@@ -91,4 +70,17 @@ class Login extends React.Component {
         );
     }
 }
-export default Form.create()(Login)
+
+const mapStateToProps = (state) => {
+    return {loginState : state.login}
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        login : (username, password) => dispatch(login(username, password))
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Form.create()(Login));

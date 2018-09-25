@@ -16,6 +16,10 @@ class MainLayoutView extends React.Component {
         });
     };
     
+    componentWillMount () {
+        
+    }
+    
     render () {
         return (
             <Layout>

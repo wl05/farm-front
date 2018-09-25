@@ -9,12 +9,12 @@ export default class HomeCom extends Component {
     }
     
     render () {
-        const {homeState} = this.props;
+        // const {homeState} = this.props;
         return (
             <div id="home-container">
-                {homeState.title}
                 <a onClick={()=> {
-                    this.props.getTitle('hello')
+                    {/*this.props.getTitle('hello')*/
+                    }
                 }}>
                     点击我改变
                 </a>
