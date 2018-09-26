@@ -1,4 +1,4 @@
-# farm-service
+# farm-front
 this is the front end of [farm-service](https://github.com/antbaobao/farm-service)
 
 
