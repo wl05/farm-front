@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import routers from "./router";
 import "./index.scss";
 const {routes, singlePagesRoutes} = routers;
+
 const RouteWithSubRoutes = () => {
     const renderRoutes = ()=> {
         let newRoutes = []

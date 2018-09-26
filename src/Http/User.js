@@ -1,13 +1,14 @@
 import Request from "./Request"
-import Config from "./Config"
 export default class User {
     constructor () {
         this.request = new Request()
     }
     
-    async login (username, password) {
-        console.log(username, password, `${Config.gateway}/login`)
-        console.log(this.request.post)
-        await this.request.post(`/login`, {username, password})
+    async login (phone, password) {
+        return await this.request.post(`/login`, {phone, password}, false)
+    }
+    
+    async auth () {
+        return await this.request.get(`/auth`)
     }
 }

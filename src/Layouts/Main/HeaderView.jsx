@@ -12,13 +12,14 @@ class HeaderCustom extends Component {
         visible : false,
     };
     
-    menuClick (e) {
-        console.log(e);
-        e.key === 'logout' && this.logout();
-    };
+    // menuClick (e) {
+    //     console.log(e);
+    //     e.key === 'logout' && this.logout();
+    // };
     
     logout () {
-        this.props.history.push('/login')
+        localStorage.removeItem('token')
+        window.location = '/login'
     };
     
     render () {
@@ -32,7 +33,8 @@ class HeaderCustom extends Component {
                 <Menu
                     mode="horizontal"
                     style={{lineHeight : '64px', float : 'right'}}
-                    onClick={this.menuClick}
+                    onClick={()=> {
+                    }}
                 >
                     <SubMenu title={<span className="avatar"><img src={avater} alt="头像"/><i
                         className="on bottom b-white"/></span>}>
