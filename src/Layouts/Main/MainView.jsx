@@ -2,7 +2,7 @@ import React from 'react'
 import HeaderView from './HeaderView'
 import FooterView from './FooterView'
 import SiderView from './Sider'
-import { Layout, Spin } from 'antd'
+import { Layout, Spin, Card } from 'antd'
 import 'antd/dist/antd.css'
 import './Main.scss'
 import { connect } from 'react-redux'
@@ -35,6 +35,7 @@ class MainLayoutView extends React.Component {
         if (authError) {
             return <div>出错了</div>
         }
+        console.log(this.props.title)
         return (
             <Layout>
                 <SiderView collapsed={this.state.collapsed}/>
@@ -48,9 +49,10 @@ class MainLayoutView extends React.Component {
                         :
                         <Layout>
                             <HeaderView toggle={()=>this.toggle()} collapsed={this.state.collapsed}/>
-                            <Content style={{margin : '16px 16px', overflow : 'initial', flex : '1 1 0'}}>
+                            <Content>
                                 {this.props.children}
                             </Content>
+                            
                             <FooterView />
                         </Layout>
                 }

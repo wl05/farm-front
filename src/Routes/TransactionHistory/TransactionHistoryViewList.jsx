@@ -82,9 +82,7 @@ class TransactionHistoryViewList extends React.Component {
         } ];
         return (
             <div className="user-list-view-container">
-                <Card title="历史账单" bordered={false}>
-                    <Table columns={columns} dataSource={data}/>
-                </Card>
+                <Table columns={columns} dataSource={data}/>
             </div>
         );
     }

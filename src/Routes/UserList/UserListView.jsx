@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Button, Card, Divider } from 'antd';
+import { Table, Button, Card, Divider, Icon } from 'antd';
 import { Link } from 'react-router-dom';
 import "./Style.scss"
 const data = [ {
@@ -57,9 +57,14 @@ class SortTable extends React.Component {
             } ];
         return (
             <div className="user-list-view-container">
-                <Card title="用户列表" bordered={false}>
-                    <Table columns={columns} dataSource={data}/>
-                </Card>
+                <Button
+                    onClick={()=> this.props.history.push("/user/add")}
+                    type="primary"
+                    style={{marginBottom : 16}}
+                >
+                    <Icon type="plus"/> 添加用户
+                </Button>
+                <Table columns={columns} dataSource={data}/>
             </div>
         );
     }
