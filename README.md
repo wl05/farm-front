@@ -25,3 +25,5 @@ Follow the following steps to get development environment running.
 
     npm start
     visit localhost:3000
+
+I am very beautiful//
